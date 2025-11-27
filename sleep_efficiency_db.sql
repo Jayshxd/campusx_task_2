@@ -29,4 +29,12 @@ FROM se
 GROUP BY `Exercise frequency`,`Smoking status`
 
 
---
+-- Group By on Awekning and show AVG Caffeine consumption, AVG Deep sleep time and AVG Alcohol consumption
+-- only for people who do exercise atleast 3 days a week.
+-- Show result in descending order awekenings
+
+SELECT se.Awakenings AS 'AWAKES',AVG(se.`Caffeine consumption`),AVG(se.`Deep sleep percentage`),AVG(se.`Alcohol consumption`)
+FROM se
+WHERE `Exercise frequency`>=3
+GROUP BY AWAKES
+ORDER BY AWAKES DESC
