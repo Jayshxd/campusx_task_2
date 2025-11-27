@@ -4,13 +4,13 @@ from se
 where `Sleep duration`>=7.5
 group by ID
 order by avg_sleep desc
-limit 15
+limit 15;
 
 
 --  Show avg deep sleep time for both gender. Round result at 2 decimal places.
 select Gender,round(avg(`Deep sleep percentage`),2) as 'avg_deep_sleep'
 from se
-group by Gender
+group by Gender;
 
 
 
@@ -20,6 +20,13 @@ select se.`Light sleep percentage`,se.Age,se.`Deep sleep percentage`
 from se
 where `Deep sleep percentage` between 20 and 45
 order by `Light sleep percentage`
-limit 10,20
+limit 10,20;
 
 
+-- Group by on exercise frequency and smoking status and show average deep sleep time, average light sleep time and avg rem sleep time.
+SELECT se.`Exercise frequency`,se.`Smoking status`,AVG(se.`Deep sleep percentage`),AVG(se.`Light sleep percentage`),AVG(se.`REM sleep percentage`)
+FROM se
+GROUP BY `Exercise frequency`,`Smoking status`
+
+
+--
