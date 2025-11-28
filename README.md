@@ -8,6 +8,9 @@
 ### 4. Group by on exercise frequency and smoking status and show average deep sleep time, average light sleep time and avg rem sleep time.
 
 
+### 5. Group By on Awekning and show AVG Caffeine consumption, AVG Deep sleep time and AVG Alcohol consumption only for people who do exercise atleast 3 days a week.Show result in descending order awekenings
+
+
 
 
 
